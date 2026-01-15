@@ -1,0 +1,34 @@
+import { open } from "@tauri-apps/plugin-shell";
+import type React from "react";
+import { LuCircle } from "react-icons/lu";
+
+import { PageType } from "~/types";
+
+interface HeaderProps {
+	setPage: React.Dispatch<React.SetStateAction<PageType>>;
+}
+
+export default function Header({ setPage }: HeaderProps) {
+	return (
+		<div className="w-full h-16 flex items-center justify-between shrink-0 pr-6 bg-header">
+			<button
+				onClick={() => setPage(PageType.HOME)}
+				className="h-full flex items-center justify-center gap-6 px-6"
+			>
+				<img
+					src="/favicon.png"
+					alt="logo"
+					className="w-6 h-6"
+				/>
+				<p className="text-lg">akaw</p>
+			</button>
+
+			<button
+				onClick={() => open("https://e-technostar.com")}
+				className="text-foreground-secondary hover:text-foreground"
+			>
+				<LuCircle />
+			</button>
+		</div>
+	);
+}

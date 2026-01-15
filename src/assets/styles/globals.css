@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+    --font-poppins: "Poppins", system-ui, sans-serif;
+
+    --color-header: #000000;
+    --color-background: #0d0f12;
+    --color-background-secondary: #171a1e;
+    --color-background-tertiary: #30363a;
+    --color-foreground: #d4d4d4;
+    --color-foreground-secondary: #a3a3a3;
+    --color-foreground-tertiary: #737373;
+    --color-accent: #5066ef;
+
+    --font-size-sm: 10px;
+    --font-size-md: 12px;
+    --font-size-lg: 13px;
+    --font-size-3xl: 23px;
+}
+
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@layer base {
+    html,
+    body,
+
+    :root {
+        @apply text-foreground bg-background font-poppins select-none;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-2 h-2;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-background-secondary rounded-md;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+}

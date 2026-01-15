@@ -1,0 +1,13 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports.ts": "explicit",
+        "source.fixAll.biome": "always",
+        "source.organizeImports.biome": "always",
+        "source.removeUnusedImports": "explicit"
+    },
+    "rust-analyzer.linkedProjects": [
+        "${workspaceFolder}/src-tauri/Cargo.toml"
+    ],
+    "cmake.sourceDirectory": "C:/Users/Admin/Downloads/Cloned/wvs/native",
+    "markdown-pdf.displayHeaderFooter": false
+}

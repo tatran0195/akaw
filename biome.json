@@ -1,0 +1,153 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [
+							[":NODE:", ":PACKAGE_WITH_PROTOCOL:", ":PACKAGE:"],
+							":BLANK_LINE:",
+							[":ALIAS:"],
+							":BLANK_LINE:",
+							[":PATH:"],
+							":BLANK_LINE:",
+							"./**/*.scss"
+						]
+					}
+				}
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"useSemanticElements": "off",
+				"useButtonType": "off",
+				"useGenericFontNames": "off",
+				"useFocusableInteractive": "off",
+				"useValidAnchor": "off",
+				"noStaticElementInteractions": "off",
+				"useKeyWithClickEvents": "off",
+				"noSvgWithoutTitle": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noDocumentCookie": "off",
+				"noThenProperty": "off",
+				"noMisleadingCharacterClass": "off",
+				"noArrayIndexKey": "off",
+				"noUnknownAtRules": {
+					"level": "error",
+					"options": {
+						"ignore": [
+							"mixin",
+							"include",
+							"use",
+							"forward",
+							"function",
+							"if",
+							"else",
+							"each",
+							"for",
+							"while"
+						]
+					}
+				}
+			},
+			"style": {
+				"noUnusedTemplateLiteral": "off",
+				"noNonNullAssertion": "off",
+				"useImportType": "warn"
+			},
+			"complexity": {
+				"noBannedTypes": "off"
+			},
+			"correctness": {
+				"noUnusedImports": "warn",
+				"useUniqueElementIds": {
+					"level": "off",
+					"options": {
+						"excludedComponents": ["SidebarTrigger", "ContentPane"]
+					}
+				},
+				"useExhaustiveDependencies": {
+					"level": "error",
+					"options": {
+						"hooks": [
+							{
+								"name": "useInputState",
+								"stableResult": [1]
+							},
+							{
+								"name": "useDisclosure",
+								"stableResult": [1]
+							},
+							{
+								"name": "useBoolean",
+								"stableResult": [1]
+							},
+							{
+								"name": "useOnboarding",
+								"stableResult": [1]
+							},
+							{
+								"name": "useImmer",
+								"stableResult": [1]
+							},
+							{
+								"name": "useSetting",
+								"stableResult": [1]
+							},
+							{
+								"name": "useToggleList",
+								"stableResult": [2, 3]
+							},
+							{
+								"name": "useStable",
+								"stableResult": true
+							},
+							{
+								"name": "useQueryClient",
+								"stableResult": true
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"indentWidth": 4,
+		"indentStyle": "tab",
+		"lineWidth": 100,
+		"attributePosition": "multiline",
+		"formatWithErrors": true,
+		"includes": ["**"]
+	},
+	"files": {
+		"includes": [
+			"**",
+			"!!**/.vscode",
+			"!!**/.github",
+			"!!**/node_modules",
+			"!!**/src-tauri",
+			"!!**/dist",
+			"!!**/build",
+			"!!**/*.js",
+			"!!**/*.css",
+			"!!**/src/util/icons.tsx",
+			"!**/src/assets/data/license-report.json"
+		]
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true,
+			"cssModules": true
+		}
+	}
+}
