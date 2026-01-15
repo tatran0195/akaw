@@ -1,2 +1,2 @@
-pub mod config;
-pub mod update;
+pub mod dirs;
+pub mod formatter;

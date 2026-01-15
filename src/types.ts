@@ -1,20 +1,13 @@
 export enum PageType {
 	HOME,
 	APPS,
-	GAMES,
+	AWS,
 	COMMANDS,
 }
 
 export interface App {
 	label: string;
 	path: string;
-}
-
-export interface Game {
-	id: string;
-	name: string;
-	banner: string;
-	installed: boolean;
 }
 
 export interface Command {
@@ -25,4 +18,14 @@ export interface Command {
 
 export interface CommandList {
 	[category: string]: Command[];
+}
+
+export interface AppearanceSettings {
+	locale: string;
+}
+
+export interface AppConfig {
+	appearance: AppearanceSettings;
+	apps: App[];
+	commands: CommandList;
 }

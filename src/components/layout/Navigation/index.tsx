@@ -23,8 +23,8 @@ export default function Navigation({ page, setPage, search, setSearch }: Navigat
 					setPage={setPage}
 				/>
 				<NavigationButton
-					id={PageType.GAMES}
-					label="Games"
+					id={PageType.AWS}
+					label="AWS"
 					page={page}
 					setPage={setPage}
 				/>

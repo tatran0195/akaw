@@ -3,7 +3,7 @@ import { useState } from "react";
 import { LuPackage } from "react-icons/lu";
 
 import { Item } from "~/components/common/Item";
-import { exec } from "~/services/api/tauri";
+import { exec } from "~/services/tauri";
 import type { App } from "~/types";
 
 import { AppItemContext } from "./AppItemContext";
@@ -34,7 +34,7 @@ export default function AppItem({ app, apps, setApps }: AppItemProps) {
 		setContext({ x, y, visible: true });
 	};
 
-	const openApp = async () => exec(app.path, false);
+	const openApp = async () => exec(`"${app.path}"`, false);
 
 	const openInExplorer = async () => {
 		const path = app.path.substring(0, app.path.lastIndexOf("\\"));

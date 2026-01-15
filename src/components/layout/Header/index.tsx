@@ -20,7 +20,7 @@ export default function Header({ setPage }: HeaderProps) {
 					alt="logo"
 					className="w-6 h-6"
 				/>
-				<p className="text-lg">akaw</p>
+				<p className="text-lg">Waka Toolbox</p>
 			</button>
 
 			<button

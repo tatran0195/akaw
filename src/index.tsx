@@ -7,11 +7,14 @@ import App from "./App";
 
 import "./assets/styles/globals.css";
 
+import { startConfigSync } from "~/util/config";
+
 window.onload = async () => {
 	const appWindow = getCurrentWindow();
 	const shortcut = "CommandOrControl+Shift+P";
 
 	const registered = await isRegistered(shortcut);
+	await startConfigSync();
 
 	if (registered) {
 		await unregister(shortcut);

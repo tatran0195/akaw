@@ -1,7 +1,8 @@
 use std::{ffi::c_void, mem::size_of};
 use tauri::{AppHandle, Manager, PhysicalPosition, PhysicalSize, Position, WebviewWindow};
+use windows::core::BOOL;
 use windows::Win32::{
-    Foundation::{BOOL, HWND},
+    Foundation::HWND,
     Graphics::Dwm::{DwmSetWindowAttribute, DWMWA_TRANSITIONS_FORCEDISABLED},
 };
 

@@ -2,7 +2,6 @@ import { open } from "@tauri-apps/plugin-shell";
 import { LuHeart } from "react-icons/lu";
 
 import Page from "~/components/common/Page";
-import { HomeUpdatePanel } from "~/components/home";
 import { PageType } from "~/types";
 
 interface HomeProps {
@@ -23,7 +22,7 @@ export default function Home({ page }: HomeProps) {
 						alt="logo"
 						className="w-16 h-16"
 					/>
-					<p className="text-3xl ">akaw</p>
+					<p className="text-3xl ">Waka Toolbox</p>
 					<p className="text-lg text-foreground-secondary text-center">
 						An advanced Windows toolbox
 					</p>
@@ -34,15 +33,13 @@ export default function Home({ page }: HomeProps) {
 					<LuHeart className="text-accent" />
 					<span>by</span>
 					<a
-						onClick={() => open("https://github.com/Bamboooz")}
+						onClick={() => open("https://e-technostar.com")}
 						className="hover:underline cursor-pointer"
 					>
-						Bamboooz
+						Waka(Ta)
 					</a>
 				</div>
 			</div>
-
-			<HomeUpdatePanel />
 		</Page>
 	);
 }

@@ -4,7 +4,7 @@ import { LuTerminal } from "react-icons/lu";
 import { VscTerminalPowershell } from "react-icons/vsc";
 
 import { Item } from "~/components/common/Item";
-import { exec } from "~/services/api/tauri";
+import { exec } from "~/services/tauri";
 import type { Command } from "~/types";
 
 import CommandItemContext from "./CommandItemContext";
